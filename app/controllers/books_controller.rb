@@ -1,4 +1,19 @@
 class BooksController < ApplicationController
+
+  def find
+    @books = Book.where([ "name LIKE ?", "%#{params[:query]}%"])
+
+    render :index
+  end
+  
+  def search
+    
+    respond_to do |format|
+      format.html # search.html.erb
+      format.json { render jason: @books }
+    end
+  end
+
   # GET /books
   # GET /books.json
   def index

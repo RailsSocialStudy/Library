@@ -1,0 +1,6 @@
+<h1>Search books</h1>
+
+<%= form_tag [ :find, :books ], :method => :get do %>
+    <%= text_field_tag "query", params[:query] %>
+    <%= submit_tag "search" %>
+<% end %>
