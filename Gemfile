@@ -40,3 +40,4 @@ gem 'jquery-rails'
 
 # To use test
 gem 'rspec-rails'
+gem 'factory_girl_rails'
